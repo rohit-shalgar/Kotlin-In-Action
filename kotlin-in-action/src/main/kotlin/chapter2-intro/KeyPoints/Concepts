@@ -1,0 +1,36 @@
+//function can be declared at the top of file no need of class
+// no semicolons
+//println instead of SOPL
+//Array is a class no need to write special syntax [] like java.
+
+In Java, all control structures are statements.
+ In Kotlin, most control structures,
+  except for the loops (for, do, and do/while) are expressions.
+  The ability to combine control structures with other expressions lets you express many common patterns concisely,
+
+
+On the other hand, assignments are expressions in Java and become statements in Kotlin.
+This helps avoid confusion between comparisons and assignments, which is a common source of mistakes.
+
+
+- val - immutable objects, final in java, cant be reassigned
+- var - muttable, can be reassigned but type cant be changed in both the cases.
+
+when writing a class
+- constuctors, getters and setters all taken care by Kotlin.
+- val only creates getters, var creates setters.
+- classes are by default public can be ommitted
+- no need for {}
+- class name does not need to match file name
+- can have many public classes
+- package name, structure does not have to follow directory structure.
+
+Can create a ENUM class, Enum is type in java
+Switch() -> When() , no need of break statements.
+
+when is more powerful than switch as switch only takes constants, objects cant be passed to switch statement.
+when can be called without arguments, you can use when{} blocks, the blocks should result in boolean output.
+
+No need to add throws keywords to your functions in Kotlin.
+checked and unchecked exceptions are treated same and also try and catch are expressions
+so last statement returns value.

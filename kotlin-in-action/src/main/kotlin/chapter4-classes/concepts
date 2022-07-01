@@ -1,0 +1,30 @@
+interfaces
+    - no need to have default/ static keyword to provide implementation.
+    - if a class implements multiple interfaces with implementation of same method
+        that default method must be overridden.
+    - super<ClassType>.method ex- super<Clickable>.showoff() is the way to invoke this methods.
+
+To avoid fragile base class problem, methods and classes that are not supposed to be extended
+should be marked as final.
+
+Kotlin follows the same principle, hence all the classes and functions that are supposed to be
+overridden need to marked with open keyword.
+    - overriden functions are open by def. need to mark them final.
+
+Need properties as final for smart cast to work.
+by def they are final, unless some custom accessors are provided.
+
+Java - private, protected,public, package-protected
+Kotlin - private,protected,public, internal
+    - by def. java classes are package protected but in Kotlin packages are used only
+        for namespaces and not for visibility.
+    - can have top level private function or class which can be accessed in the same file.
+    - protected can only be accessed in the subclasses. In Java its inside package
+    - internal is specific to a module. it becomes package-protected when compiled into java class.
+
+
+class Client(val other: Any?)
+// Any - object class in Java
+//Any? - indicates that other is of type Any class and it can be null.
+
+override is mandatory in Kotlin.

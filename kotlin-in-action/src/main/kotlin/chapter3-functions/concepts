@@ -1,0 +1,10 @@
+""" aksdas """
+- triple quote strings in Kotlin, you dont really need escape characters.
+- they can be multiline as well.
+
+"//".toRegex() - you have regular expression}
+otherwise any string passed to split function is considered as normal string
+In Java, split method takes regular expression.
+
+Kotlin also provides extension functions such as - substringBeforeLast, substringAfterLast(".")
+to avoid writing complex regular expressions.
