@@ -1,0 +1,36 @@
+lateInit
+    - lateinit's are used for dependency injection
+    - lateinit indicates that the variable is of var type and it throws exception
+        if they are to be accessed before intialization.
+
+
+fun f():Unit{} // is same as fun f(){}
+    - unit corresponds to void return type
+    - but we dont really need to write it explicitly.
+    - can be used as a type parameter class Person: People<Unit>
+    - it is a type in Kt so can be used to pass in as a type for functions or classes.
+    - no need for explicit return statements.
+
+
+Nothing type:
+    -The compiler knows that a function with this return type never terminates normally
+        and uses that information when analyzing the code calling the function.
+    -usage - many testing libraries have
+                a function called fail that fails the current test by throwing
+                an exception with a specified message.
+
+
+If a function takes a parameter that is a Collection but not a MutableCollection,
+    you know it’s not going to modify the collection, but only read data from it.
+And if a function requires you to pass a Mutable-Collection,
+ you can assume that it’s going to modify the data.
+
+*input - varargs is expected as input eg- main(String[] args)
+Normal arrays created in kotlin are boxed to wrapper arrays - Integer etc
+need to use intArray(), byteArray etc to make sure the arrays are primitive types.
+eg-
+val fiveZeros = IntArray(5)
+val fiveZerosToo = intArrayOf(0, 0, 0, 0, 0)
+
+ All the functions - filter, map, and so on work for arrays as well, including the arrays of primitive types. (
+ Note - that the return values of these functions are lists, not arrays.
