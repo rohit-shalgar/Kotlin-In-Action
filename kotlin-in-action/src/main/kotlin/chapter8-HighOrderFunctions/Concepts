@@ -7,4 +7,4 @@ lambda expressions are compiled into anonymous classes.
     if lambda expressions need to compiled again due to value changes then
     the anonymous classes will be computed over and over
 
-inline keyword prevents that by injecting the code as it is wherever it is used.
+ inline keyword prevents that by injecting the code as it is wherever it is used.
