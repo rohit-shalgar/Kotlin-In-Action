@@ -1,4 +1,4 @@
-Function types are lambdas with paranthesis and with a return type.
+Function types are lambdas with parenthesis and with a return type.
 
 example - (Int,Int) -> Int = {x+y}
            ()-> Unit = {// void operation}
@@ -8,3 +8,21 @@ lambda expressions are compiled into anonymous classes.
     the anonymous classes will be computed over and over
 
  inline keyword prevents that by injecting the code as it is wherever it is used.
+
+ Inline can be used when function takes lambda as an argument and invokes this lambda.
+ for small collections , filter , map is fine as they are inline
+ but they do create intermediate collection object to store the result hence
+ for large collection size use asSequence() which is not inlined by default.
+
+
+ try-with-resource = use{} function in Kotlin, this function takes lambda and it is callled on
+                        closeable() objects - example -> bufferreader
+
+non-local return = return statements in lambda return from the function as well.
+                    they are called non local returns as they return a larger block than expected.
+
+To distinguish a local return from a non-local one, you use labels.
+You can label a lambda expression from which you want to return,
+and then refer to this label after the return keyword.
+
+
